@@ -1,0 +1,58 @@
+.data-lanes {
+	.data-lane-list {
+		display: flex;
+		.data-lane {
+			flex-grow: 1;
+			flex-base: 0;
+			+ .data-lane {
+				margin-left: 0.7rem;
+			}
+			> label {
+				display: block;
+				background-color: $primary-color;
+				color: $primary-contrast;
+				padding: 0.7rem 2rem;
+			}
+			.data-lane-state {
+				+ .data-lane-state {
+					margin-top: 0.7rem;
+				}
+				> label {
+					background-color: $secondary-color;
+					color: $secondary-contrast;
+					padding: 0.7rem 2rem;
+					display: block;
+				}
+			}
+		}
+	}	
+	.data-lane-state-dropzone {
+		border: dashed 2px $primary-color;
+		padding: 1rem;
+		display: none;
+		.data-lane-state-dropzone-description {
+			position: absolute;
+			bottom: 1rem;
+			left: 1rem;
+		}
+	}
+	&.dragging {
+		.droppable {
+			.data-lane-cards {
+				visibility: hidden;
+			}
+			.data-lane-state-dropzone {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+	.data-lane-state {
+		position: relative;
+		min-height: 150px;
+	}
+}

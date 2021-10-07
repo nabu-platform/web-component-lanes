@@ -1,0 +1,14 @@
+{
+	"name": "web-component-lanes", 
+	"resources": {
+		"lanes.js": {
+			"url": "lanes.js"
+		}, 
+		"lanes.tpl": {
+			"url": "lanes.tpl"
+		}, 
+		"lanes.scss": {
+			"url": "lanes.scss"
+		}
+	}
+}
